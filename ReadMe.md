@@ -1,6 +1,8 @@
 run_analysis.r is coded as an R function without any arguments. To run it load the 
-function code into your working session and invoke at with command:
-r_analysis(). The steps in the script can also be executed one at a time if it is useful
+function code into your working session and invoke it with command:
+r_analysis(). 
+
+The steps in the script can also be executed one at a time if it is useful
 to view interim results. Please see comments in the script which describe the processing
 in more detail.
 
@@ -9,6 +11,8 @@ activity with in subject
 
 In order to run the run_analysis.R script successfully be sure that the following files
 are in your working directory:
+
+run_analysis.R
 subject_test.txt
 y_test.txt
 X_test.txt

@@ -1,11 +1,14 @@
 Code Book
-Variables output for data cleaning project
-
-
+tidydata.txt Output from data cleaning project produced by 
+write.table(ans,"tidydata.txt,row.names=FALSE) after running run_analysis.R
+The file is a very wide data set consisting of columns ActivityName and Feature 
+concatenated together(e.g. LAYING.TimeBodyAcc.mean.X) and rows of
+30 mean observations corresponding to each of the subjects in the experiment.
 
 subjectID
-	character variable containing an integer 1 through 30 which represents the identity
-	of one experimental subject.
+	is implicitly contained by the position of an observation. Subject 1 observations are
+	found in the first numeric row of data. Subject 2 results are in the second numeric 
+	row of data, etc.
 	
 
 ActivityName
@@ -20,9 +23,12 @@ ActivityName
 Feature
 	Experimenters took measurements of  the subjects during each of the activities 
 	capturing accelerometer and gyroscope 3-axial raw signals. This field is the
-	description provided by the experimenters.
+	description provided by the experimenters with minor modifications made by me. These 
+	modifications eliminated parentheses, in some cases substituting '.' for readability.
+	Additional modifications substituted 'Time' for 't' and 'Frequency' for 'f' in order
+	to improve readability. 
 	
-	Possible Values:
+	Field Values:
 tBodyAcc-mean()-X
 tBodyAcc-mean()-Y
 tBodyAcc-mean()-Z
@@ -110,25 +116,6 @@ angle(Z,gravityMean)
 	Experimenters note regarding Features:
 	These signals were used to estimate variables of the feature vector for each pattern:  
 	'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
-
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
-
 
 Measure
 The measures in this file represent the mean of all measurements taken of each feature 
